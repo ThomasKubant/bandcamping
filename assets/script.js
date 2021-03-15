@@ -1,3 +1,4 @@
+//Fetch
 fetch (
     'https://app.ticketmaster.com/discovery/v2/events.json?keyword=devjam&source=universe&countryCode=US&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS'
     )
@@ -9,5 +10,7 @@ fetch (
               console.log(data);
             });
 
-        //last.fm api key
-        //search band to bring up information
+            //79000ec6a486b0cc93684413435a84c6
+
+
+      
