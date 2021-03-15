@@ -8,3 +8,6 @@ fetch (
             .then(function(data) {
               console.log(data);
             });
+
+        //last.fm api key
+        //search band to bring up information
