@@ -6,6 +6,9 @@
 body {
     background-color: rgb(165, 165, 165);
 }
-.search {
-    margin: 10px;
+input {
+    margin-bottom: 0px!important;
+}
+button {
+    margin-bottom: 0px!important;
 }
