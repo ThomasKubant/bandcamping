@@ -10,7 +10,7 @@ fetch (
               console.log(data);
             });
 
-            //79000ec6a486b0cc93684413435a84c6
-
+            var x = localStorage.getItem("mytime");   
+            localStorage.getItem(keyname);
 
       
