@@ -1,0 +1,11 @@
+.header {
+    background-color: rgb(83, 83, 83);
+    color: rgb(219, 32, 32);
+    text-align: center;
+}
+body {
+    background-color: rgb(165, 165, 165);
+}
+.search {
+    margin: 10px;
+}
