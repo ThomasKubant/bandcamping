@@ -1,4 +1,10 @@
-//Fetch
+
+//Event Listener
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", () => {
+console.log(submitButton);
+})
+Fetch
 fetch (
     'https://app.ticketmaster.com/discovery/v2/events.json?keyword=devjam&source=universe&countryCode=US&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS'
     )
@@ -10,6 +16,7 @@ fetch (
               console.log(data);
             });
 
+            
             //var favorite = localStorage.getItem(".favorite");   
             //localStorage.getItem(favorite);
 
