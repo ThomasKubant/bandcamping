@@ -73,7 +73,7 @@ function createyear() {
         doc.onclick = (function () {
             var currentYear = i;
             return function() {
-                month = currentYear;
+                year = currentYear;
                 document.getElementById("currentYear").innerHTML = year;
                 loadCalendarDays();
                 return year;
@@ -114,8 +114,9 @@ function loadCalendarDays() {
         document.getElementById("calendarDays").appendChild(clear);
 
         //clicking on the day will cause this event
-        d.addEventListener('click', function()
-        )
+        d.addEventListener('click', function(){
+            
+        })
         
     }
 
