@@ -9,9 +9,10 @@ body {
 input {
     margin-bottom: 0px!important;
 }
-button {
+.button {
     margin-bottom: 0px!important;
 }
 .search {
     padding-right: 15px;
 }
+
