@@ -20,20 +20,8 @@ fetch (
             })
             .then(function(data) {
               console.log(data);
+                        
             });
-// Fetch for last FM
-//  fetch(
-//      `https://www.last.fm/api/auth/?api_key=79000ec6a486b0cc93684413435a84c6`
-//     )
-//             .then(function(response) {
-//                 console.log(response);
-//                 return response.json();
-//             })
-//             .then(function(data) {
-//                 console.log(data);
-//             });
-//Start Local Storage          
-// // // // // // // // // // // // // }// 
 
 // *start of the calendar code
 
