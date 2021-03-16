@@ -7,9 +7,9 @@ fetch (
             })
             .then(function(data) {
               console.log(data);
+                        
             });
-    
-
+            
 //Fetch for last FM
 //  fetch(
 //      `https://www.last.fm/api/auth/?api_key=79000ec6a486b0cc93684413435a84c6`
@@ -23,21 +23,7 @@ fetch (
 //             });
 //Start Local Storage          
            
-const storageInput = document.querySelector('.storage');
-const text = document.querySelector('.text');
-const button = document.querySelector('.button');
-const storedInput = localStorage.getItem('.textinput');
 
-if(storageInput){
-    text.textContent = storedInput
-}
-storageInput.addEventListener('input', letter=> {
-    text.textContent = letter.target.value;
-})
-const saveToLocalStorage = () => {
-    localStorage.setItem('textinput', text.textContent)
-}
-button.addEventListener('click', saveToLocalStorage);
 var search = function() {
     var userInput = document.getElementById('artistSearch').value;
     localStorage.setItem("search", userInput);
