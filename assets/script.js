@@ -1,10 +1,3 @@
-
-//Event Listener
-// const submitButton = document.getElementById("submit");
-// submitButton.addEventListener("click", (saveToLocalStorage) => {
-// console.log(submitButton);
-// })
-// //Fetch for TicketMaster API Key wH9MUA889uOpKEnatwDqKHSN2IHFzJhS
 fetch (
     'https://app.ticketmaster.com/discovery/v2/events.json?keyword=devjam&source=universe&countryCode=US&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS'
     )
@@ -45,9 +38,9 @@ const saveToLocalStorage = () => {
     localStorage.setItem('textinput', text.textContent)
 }
 button.addEventListener('click', saveToLocalStorage);
-
-
-
-
-
-      
+var search = function() {
+    var userInput = document.getElementById('artistSearch').value;
+    localStorage.setItem("search", userInput);
+    window.location.href = "./artist.html"
+}
+document.getElementById("searchBtn").addEventListener('click', search);
