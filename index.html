@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Band Camping</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="https://kit.fontawesome.com/b67fb896d0.js" crossorigin="anonymous"></script>
@@ -23,6 +23,41 @@
                 <button class="searchBtn button" id="searchBtn">S</button>
             </div>
         </div>
+    </div>
+
+     <!-- the calendar -->
+    <div class="calendar" id="calendar">
+        <!-- the month selector -->
+        <div class="calendar-btn month-btn" onclick="('$months').toggle('fast')">
+            <span id="currentMonth"></span>
+            <div id="months" class="monthSelector"></div>
+        </div>
+        <!-- the year selector -->
+        <div class="calendar-btn  year-btn" onclick="('$years').toggle('fast')">
+            <span id="currentYear"></span>
+            <div id="years" class="yearSelector"></div>
+        </div>
+
+        <div class="clear"></div>
+
+        <!-- days of the week -->
+        <div class="calendarDates">
+            <div class="days">
+                <div class="dayLabel">Sunday</div>
+                <div class="dayLabel">Monday</div>
+                <div class="dayLabel">Tuesday</div>
+                <div class="dayLabel">Wednesday</div>
+                <div class="dayLabel">Thursday</div>
+                <div class="dayLabel">Friday</div>
+                <div class="dayLabel">Saturday</div>
+
+                <div class="clear"></div>
+
+                <div id="calendarDays" class="days">
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="./assets/script.js"></script>
 </body>
