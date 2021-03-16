@@ -88,3 +88,4 @@ function createyear() {
 
 // calendar days shenanigans
 
+function daysInMonth(month, year)
