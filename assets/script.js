@@ -28,6 +28,8 @@ fetch (
 
 // Months stored as string
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+var selectedDays = new Array();
+var mousedown = false;
 
 // creates a dropdown menu for the months
 function createMonth() {
@@ -51,7 +53,7 @@ function createMonth() {
 }
 
 // creates a dropdown menu for the years
-function createyear() {
+function createYear() {
     var startYear = 2000;
     var endYear = 2022;
     for (var i = startYear; i < endYear; i++) {
@@ -104,13 +106,37 @@ function loadCalendarDays() {
 
         //clicking on the day will cause this event
         d.addEventListener('click', function(){
+            this.classList.toggle('selected');
+
+            if (!selectedDays.includes(this.dataset.day)) {
+                selectedDays.push(this.dataset.day);
+                
+            } else {
+                selectedDays.splice(selectedDays.indexOf(this.dataset.day), 1);
+
+            }
             
-        })
+        });
+
+        document.getElementById("calendarDays").appendChild(d);
         
     }
 
+    window.addEventListener('load', function() {
+        var date = new Date();
+        month = date.getMonth();
+        year = date.getFullYear();
+        document.getElementById("currentMonth").innerHTML = months[month];
+        document.getElementById("currentYear").innerHTML = year;
+        loadCalendarMonths();
+        loadCalendarYears();
+        loadCalendarDays();
+    })
+
+    var clear = document.createElement("div");
+    clear.className = "clear"
+    document.getElementById("calendarDays").appendChild(clear);
     
 }
 
-var selectedDays = new Array();
-var mousedown = false;
+// *end of calendar code
