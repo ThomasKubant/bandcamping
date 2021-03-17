@@ -88,3 +88,29 @@ var search = function() {
 }
 document.getElementById("searchBtn").addEventListener('click', search);
 document.getElementById("favBtn").addEventListener('click', addFavoriteArtist);
+
+//Start Favorite Artist List
+
+getFavoriteArtistFromStorage();
+
+for(i=0;i<FavoriteArtist.length;i++) {
+    console.log(i);
+    console.log(eventName);
+    var favoriteArtistEl = document.createElement("li");
+    favoriteArtistEl.innerHTML = favbtn;
+}
+var getFavoriteArtistFromStorage= function() {
+favoriteArists = JSON.parse(localStorage.getItem("favoriteArtists"));
+if(!favoriteArists){
+    favoriteArists =[]
+}
+}
+var addFaroviteArtist = function() {
+
+    favoriteArists.push(artistName);
+    localStorage.setItem("favoriteArtists", JSON.stringify(favoriteArists))
+
+}
+var search = function() {
+
+}
