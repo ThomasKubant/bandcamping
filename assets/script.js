@@ -22,21 +22,6 @@ fetch (
               console.log(data);
                         
             });
-    
-
-// Fetch for last FM
-//  fetch(
-//      `https://www.last.fm/api/auth/?api_key=79000ec6a486b0cc93684413435a84c6`
-//     )
-//             .then(function(response) {
-//                 console.log(response);
-//                 return response.json();
-//             })
-//             .then(function(data) {
-//                 console.log(data);
-//             });
-//Start Local Storage          
-// // // // // // // // // // // // // }// 
 
 // *start of the calendar code
 
@@ -76,7 +61,7 @@ function createyear() {
         doc.onclick = (function () {
             var currentYear = i;
             return function() {
-                month = currentYear;
+                year = currentYear;
                 document.getElementById("currentYear").innerHTML = year;
                 loadCalendarDays();
                 return year;
@@ -89,4 +74,42 @@ function createyear() {
 
 // calendar days shenanigans
 
-function daysInMonth(month, year)
+function daysInMonth(month, year) {
+    let d = new Date(year, month+1, 0)
+    return d.getDate();
+}
+
+function loadCalendarDays() {
+    document.getElementById("calendarDays").innerHTML = "";
+    var tempDate = new Date(year, month, 0);
+    var number = daysInMonth(month, year);
+    var dayOfWeek = tempDate.getDay();
+
+    for(var i = 0; i <= dayOfWeek; i++) {
+        var d = document.createElement("div");
+        d.classList.add("day")
+        d.classList.add("blank")
+        document.getElementById("calendarDays").appendChild(d);
+
+    }
+
+    for (var i = 0; i < number; i++) {
+        var temp = i + 1;
+        var d = document.createElement("div");
+        d.id = "calendarDay_" + i;
+        d.className = "day"
+        d.innerHTML = temp;
+        document.getElementById("calendarDays").appendChild(clear);
+
+        //clicking on the day will cause this event
+        d.addEventListener('click', function(){
+            
+        })
+        
+    }
+
+    
+}
+
+var selectedDays = new Array();
+var mousedown = false;
