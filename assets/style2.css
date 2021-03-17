@@ -12,6 +12,11 @@ input {
 button {
     margin-bottom: 0px!important;
 }
+.headerText a {
+    text-decoration: none;
+    color: rgb(219, 32, 32);
+
+}
 .search {
     padding-right: 15px;
 }
@@ -26,7 +31,7 @@ button {
     text-shadow: 2px 2px rgb(83, 83, 83);
     font-size: 3.5vw;
 }
-.artistHeader h3 {
+.artistHeader h2 {
     margin-left: 20px;
     color: rgb(165, 165, 165);
     text-shadow: 2px 2px rgb(83, 83, 83);
