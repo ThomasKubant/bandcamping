@@ -28,12 +28,12 @@
      <!-- the calendar -->
     <div class="calendar" id="calendar">
         <!-- the month selector -->
-        <div class="calendar-btn month-btn" onclick="('$months').toggle('fast')">
+        <div class="calendar-btn month-btn" onclick="$('months').toggle">
             <span id="currentMonth"></span>
             <div id="months" class="monthSelector"></div>
         </div>
         <!-- the year selector -->
-        <div class="calendar-btn  year-btn" onclick="('$years').toggle('fast')">
+        <div class="calendar-btn  year-btn" onclick="$('months').toggle">
             <span id="currentYear"></span>
             <div id="years" class="yearSelector"></div>
         </div>
@@ -59,8 +59,9 @@
         </div>
 
     </div>
-    <script src="./assets/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+   
 
 </body>
 
