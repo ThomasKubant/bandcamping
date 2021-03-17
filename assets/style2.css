@@ -45,3 +45,11 @@ button {
 .favoriteBtn button {
     margin-top: 35px;
 }
+.artistBioHeader {
+    color: rgb(219, 32, 32);
+    margin: 10px 20px;
+    text-shadow: 2px 2px rgb(83, 83, 83);
+}
+.artistBio {
+    margin: 0px 20px;
+}
