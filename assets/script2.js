@@ -60,3 +60,4 @@ var search = function() {
 }
 document.getElementById("searchBtn").addEventListener('click', search);
 document.getElementById("favBtn").addEventListener('click', addFavoriteArtist);
+
