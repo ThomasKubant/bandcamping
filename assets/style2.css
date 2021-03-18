@@ -2,6 +2,8 @@
     background-color: rgb(83, 83, 83);
     color: rgb(219, 32, 32);
     text-align: center;
+    text-shadow: 2px 2px rgb(255, 38, 38);
+
 }
 body {
     background-color: rgb(165, 165, 165);
@@ -44,4 +46,24 @@ button {
 }
 .favoriteBtn button {
     margin-top: 35px;
+}
+.artistBioHeader {
+    color: rgb(219, 32, 32);
+    margin: 10px 20px;
+    text-shadow: 2px 2px rgb(83, 83, 83);
+}
+.artistBio {
+    margin: 0px 20px;
+}
+.artistEventsHeader {
+    color: rgb(219, 32, 32);
+    margin: 10px 20px;
+    text-shadow: 2px 2px rgb(83, 83, 83);
+}
+ul.artistEventsList {
+    list-style: none;
+}
+.eventLi a {
+    color: rgb(219, 32, 32);
+    text-shadow: 1px 1px rgb(83, 83, 83);
 }

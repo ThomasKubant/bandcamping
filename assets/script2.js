@@ -9,24 +9,18 @@ fetch('http://ws.audioscrobbler.com/2.0/?method=artist.search&artist='+ userInpu
             artistName = data.results.artistmatches.artist[0].name;
             getArtististInfo();
             getSpotifyInfo();
+            getEvents();
             document.getElementById("artistName").textContent = artistName;
         })
     }
 })
 
 var getSpotifyInfo = function() {
-    fetch('https://api.spotify.com/api/token', {
-            method: 'POST', headers: {
-                'Authorization': 'Basic NDU2ZmRmYjZmOGU4NDJjMTk1ZWI3YTIwY2ZhNGQzYTQ6NDJlNTliNTJlYzcxNDg0ZGIxYjA0MGQ4YzVkOTcyOGE=',
-            }
-        }).then(function(response) {
-            console.log(response);
-        })
     fetch('https://api.spotify.com/v1/search?query='+ artistName +'&type=artist', {
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer BQBBa7x3MIMp4-tD1WA2c7homaWhS_rgBEAlevgMLVUGrBZzPeXHfzQ2JAlobJN-U7i3H9aQ4BA9jsJeCPbHapM7Bhv612Sn8qKVNo120sDXHD3aND9AqCD0lSdPhPQBCsIpDuPhXkqsSksSin1RIh3pO_h1Yag'
+                'Authorization': 'Bearer BQB_VclTeqMbKOfEViNbVEOas4tRz2pxMsfxYj5JZsLg1loLS2tg7xnPZnZakclVGN5G5hZ74dPLfQe4ukfRBmVJRMRJIFitOnZTkMbfQTt8fh8CtVU0bp7R118HBvq7Dt4OrUl6l4H_0YtSfhZHFpcHAh2P87U'
             }
         }).then(function(response) {
             if(response.ok) {
@@ -47,11 +41,38 @@ var getArtististInfo = function() {
                 console.log(data);
                 var genre = data.artist.tags.tag[0].name;
                 genre = genre.charAt(0).toUpperCase() + genre.slice(1);
+                var bio = data.artist.bio.content;
+                document.getElementById('artistBioHeader').textContent = "About " + artistName;
+                document.getElementById('artistBio').textContent = bio;
                 document.getElementById('artistGenre').textContent = genre;
             })
         }
     })
 }
+var getEvents = function() {
+    fetch('https://app.ticketmaster.com/discovery/v2/events.json?keyword='+ artistName +'&sort=date,asc&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS').then(function(response){
+        if(response.ok) {
+            response.json().then(function(data) {
+                console.log(data);
+                var events = data._embedded.events;
+                console.log(events.length);
+                for(i=0;i<events.length;i++) {
+                    console.log(i);
+                    var eventName = events[i].name;
+                    var eventLink = events[i].url;
+                    var eventDate = events[i].dates.start.localDate;
+                    eventDate = moment(eventDate).format("MM-DD-YYYY");
+                    console.log(eventName);
+                    var eventEl = document.createElement("li");
+                    eventEl.innerHTML = "<a href= '" + eventLink + "'>"+ eventDate +" "+ eventName + "</a>";
+                    eventEl.className = "eventLi";
+                    document.getElementById("artistEventsList").appendChild(eventEl);
+                }
+            })
+        }
+    })
+}
+
 var addFavoriteArtist = function() {
     var favoriteArists = JSON.parse(localStorage.getItem("favoriteArtists"));
     if(!favoriteArists) {

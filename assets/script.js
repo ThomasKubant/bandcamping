@@ -1,3 +1,4 @@
+var userInput;
 var search = function() {
     var userInput = document.getElementById('artistSearch').value;
     localStorage.setItem("search", userInput);
@@ -111,32 +112,25 @@ function loadCalendarDays() {
             if (!selectedDays.includes(this.dataset.day)) {
                 selectedDays.push(this.dataset.day);
                 
-            } else {
-                selectedDays.splice(selectedDays.indexOf(this.dataset.day), 1);
-
-            }
-            
-        });
-
-        document.getElementById("calendarDays").appendChild(d);
-        
+                });
+                calendar.render();
+              });
+var favoriteArtistsList = function() {
+    var artistsList = JSON.parse(localStorage.getItem("favoriteArtists"));
+    for (i=0;i<artistsList.length;i++) {
+        var artistListEl = document.createElement('li');
+        artistListEl.textContent = artistsList[i];
+        artistListEl.className = "favArtist";
+        artistListEl.id = "favArtist";
+        console.log(artistListEl);
+        document.getElementById("favoriteArtistsList").appendChild(artistListEl);
     }
-
-    window.addEventListener('load', function() {
-        var date = new Date();
-        month = date.getMonth();
-        year = date.getFullYear();
-        document.getElementById("currentMonth").innerHTML = months[month];
-        document.getElementById("currentYear").innerHTML = year;
-        loadCalendarMonths();
-        loadCalendarYears();
-        loadCalendarDays();
-    })
-
-    var clear = document.createElement("div");
-    clear.className = "clear"
-    document.getElementById("calendarDays").appendChild(clear);
-    
+}
+var artistLink = function() {
+    target = this;
+    var artistSearch = target.textContent;
+    console.log(artistSearch);
 }
 
-// *end of calendar code
+favoriteArtistsList();
+document.querySelectorAll('#favArtist').addEventListener
