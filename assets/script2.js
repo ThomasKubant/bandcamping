@@ -20,7 +20,7 @@ var getSpotifyInfo = function() {
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer BQBBa7x3MIMp4-tD1WA2c7homaWhS_rgBEAlevgMLVUGrBZzPeXHfzQ2JAlobJN-U7i3H9aQ4BA9jsJeCPbHapM7Bhv612Sn8qKVNo120sDXHD3aND9AqCD0lSdPhPQBCsIpDuPhXkqsSksSin1RIh3pO_h1Yag'
+                'Authorization': 'Bearer BQB_VclTeqMbKOfEViNbVEOas4tRz2pxMsfxYj5JZsLg1loLS2tg7xnPZnZakclVGN5G5hZ74dPLfQe4ukfRBmVJRMRJIFitOnZTkMbfQTt8fh8CtVU0bp7R118HBvq7Dt4OrUl6l4H_0YtSfhZHFpcHAh2P87U'
             }
         }).then(function(response) {
             if(response.ok) {
@@ -50,7 +50,7 @@ var getArtististInfo = function() {
     })
 }
 var getEvents = function() {
-    fetch('https://app.ticketmaster.com/discovery/v2/events.json?keyword='+ artistName +'&sort=date,desc&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS').then(function(response){
+    fetch('https://app.ticketmaster.com/discovery/v2/events.json?keyword='+ artistName +'&sort=date,asc&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS').then(function(response){
         if(response.ok) {
             response.json().then(function(data) {
                 console.log(data);
@@ -65,6 +65,7 @@ var getEvents = function() {
                     console.log(eventName);
                     var eventEl = document.createElement("li");
                     eventEl.innerHTML = "<a href= '" + eventLink + "'>"+ eventDate +" "+ eventName + "</a>";
+                    eventEl.className = "eventLi";
                     document.getElementById("artistEventsList").appendChild(eventEl);
                 }
             })
