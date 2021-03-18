@@ -21,6 +21,7 @@ fetch (
             })
             .then(function(data) {
               console.log(data);
+                        
             });
             document.addEventListener('DOMContentLoaded', function() {
                 var calendarEl = document.getElementById('calendar');
