@@ -20,7 +20,7 @@ var getSpotifyInfo = function() {
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer BQBBa7x3MIMp4-tD1WA2c7homaWhS_rgBEAlevgMLVUGrBZzPeXHfzQ2JAlobJN-U7i3H9aQ4BA9jsJeCPbHapM7Bhv612Sn8qKVNo120sDXHD3aND9AqCD0lSdPhPQBCsIpDuPhXkqsSksSin1RIh3pO_h1Yag'
+                'Authorization': 'Bearer BQB_VclTeqMbKOfEViNbVEOas4tRz2pxMsfxYj5JZsLg1loLS2tg7xnPZnZakclVGN5G5hZ74dPLfQe4ukfRBmVJRMRJIFitOnZTkMbfQTt8fh8CtVU0bp7R118HBvq7Dt4OrUl6l4H_0YtSfhZHFpcHAh2P87U'
             }
         }).then(function(response) {
             if(response.ok) {
