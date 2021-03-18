@@ -50,7 +50,7 @@ var getArtististInfo = function() {
     })
 }
 var getEvents = function() {
-    fetch('https://app.ticketmaster.com/discovery/v2/events.json?keyword='+ artistName +'&sort=date,desc&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS').then(function(response){
+    fetch('https://app.ticketmaster.com/discovery/v2/events.json?keyword='+ artistName +'&sort=date,asc&apikey=wH9MUA889uOpKEnatwDqKHSN2IHFzJhS').then(function(response){
         if(response.ok) {
             response.json().then(function(data) {
                 console.log(data);
@@ -65,6 +65,7 @@ var getEvents = function() {
                     console.log(eventName);
                     var eventEl = document.createElement("li");
                     eventEl.innerHTML = "<a href= '" + eventLink + "'>"+ eventDate +" "+ eventName + "</a>";
+                    eventEl.className = "eventLi";
                     document.getElementById("artistEventsList").appendChild(eventEl);
                 }
             })
