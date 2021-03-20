@@ -1,4 +1,3 @@
-
 var userInput;
 var search = function() {
     var userInput = document.getElementById('artistSearch').value;
@@ -48,3 +47,6 @@ var artistLink = function() {
     var artistSearch = target.textContent;
     console.log(artistSearch);
 }
+
+favoriteArtistsList();
+document.querySelectorAll('#favArtist').addEventListener

@@ -2,6 +2,8 @@
     background-color: rgb(83, 83, 83);
     color: rgb(219, 32, 32);
     text-align: center;
+    text-shadow: 2px 2px rgb(255, 38, 38);
+
 }
 body {
     background-color: rgb(165, 165, 165);
@@ -11,6 +13,11 @@ input {
 }
 button {
     margin-bottom: 0px!important;
+}
+.headerText a {
+    text-decoration: none;
+    color: rgb(219, 32, 32);
+
 }
 .search {
     padding-right: 15px;
@@ -26,7 +33,7 @@ button {
     text-shadow: 2px 2px rgb(83, 83, 83);
     font-size: 3.5vw;
 }
-.artistHeader h3 {
+.artistHeader h2 {
     margin-left: 20px;
     color: rgb(165, 165, 165);
     text-shadow: 2px 2px rgb(83, 83, 83);
@@ -39,4 +46,24 @@ button {
 }
 .favoriteBtn button {
     margin-top: 35px;
+}
+.artistBioHeader {
+    color: rgb(219, 32, 32);
+    margin: 10px 20px;
+    text-shadow: 2px 2px rgb(83, 83, 83);
+}
+.artistBio {
+    margin: 0px 20px;
+}
+.artistEventsHeader {
+    color: rgb(219, 32, 32);
+    margin: 10px 20px;
+    text-shadow: 2px 2px rgb(83, 83, 83);
+}
+ul.artistEventsList {
+    list-style: none;
+}
+.eventLi a {
+    color: rgb(219, 32, 32);
+    text-shadow: 1px 1px rgb(83, 83, 83);
 }
