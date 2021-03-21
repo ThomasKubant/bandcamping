@@ -38,3 +38,121 @@ div#calendar {
     font-size: 2.5vw;
     margin: 20px 0px;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="grid-x"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="grid-x"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    [class*="grid-x"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    [class*="grid-x"] 
+    {
+      width: 100%;
+    }
+  }
+  /* Title Band Camping */
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="cell medium-8 headerText"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="cell medium-8 headerText"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    [class*="cell medium-8 headerText"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    [class*="cell medium-8 headerText"] 
+    {
+      width: 100%;
+    }
+  }
+  /* Calandar */
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="column medium-7"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="column medium-7"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    [class*="column medium-7"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    [class*="column medium-7"] 
+    {
+      width: 100%;
+    }
+  }
+  /* Favorites List */
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="column medium-5"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="column medium-5"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    [class*="column medium-5"] 
+    {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    [class*="column medium-5"] 
+    {
+      width: 100%;
+    }
+  }
