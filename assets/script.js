@@ -23,14 +23,7 @@ fetch (
               console.log(data);
                         
             });
-            document.addEventListener('DOMContentLoaded', function() {
-                var calendarEl = document.getElementById('calendar');
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                  initialView: 'dayGridMonth',
-                
-                });
-                calendar.render();
-              });
+
 var favoriteArtistsList = function() {
     var artistsList = JSON.parse(localStorage.getItem("favoriteArtists"));
     for (i=0;i<artistsList.length;i++) {
